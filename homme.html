@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAR LANA9A SHOP | Montres & Accessoires de Luxe</title>
+
+    <!-- Open Graph Meta Tags for WhatsApp Preview -->
+    <meta property="og:title" content="DAR LANA9A SHOP - Collection 2026">
+    <meta property="og:description" content="Commandez vos montres et accessoires préférés avec livraison rapide et paiement à la livraison.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #12151c;          
+            --accent-gold: #c29b62;      
+            --cream-bg: #f7f1e5;         
+            --cream-card: #fcf9f2;       
+            --text-dark: #1f1b18;        
+            --text-muted: #736b63;       
+            --whatsapp: #25d366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            padding-top: 140px; /* Augmenté pour s'ajuster au header plus grand */
+        }
+
+        h1, h2, h3, .brand-title {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Header / Navbar Agrandie */
+        header {
+            background-color: var(--primary);
+            color: white;
+            height: 120px; /* Augmenté de 85px à 120px */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease-in-out;
+            border-bottom: 3px solid var(--accent-gold);
+            display: flex;
+            align-items: center;
+        }
+
+        header.header-hidden {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.8rem;
+            height: 100%;
+        }
+
+        .header-logo {
+            height: 101px; /* Agrandie de 60px à 90px */
+            width: 10%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            background-color: var(--cream-bg);
+            display: block;
+        }
+
+        .header-text {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header-text h1 {
+            font-size: 1.8rem; /* Titre plus grand */
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .header-text p {
+            font-size: 0.95rem; /* Sous-titre plus grand */
+            color: var(--accent-gold);
+            letter-spacing: 0.8px;
+            margin-top: 4px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(18, 21, 28, 0.82), rgba(18, 21, 28, 0.82)), 
+                        url('rolex1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4.5rem 1rem;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            color: #d1c7bc;
+            max-width: 600px;
+            margin: 0 auto 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary);
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Product Grid */
+        .container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin: 0.5rem auto 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--cream-card);
+            border: 1px solid #e8dec8;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(194, 155, 98, 0.15);
+            border-color: var(--accent-gold);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e8dec8;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .btn-order {
+            background-color: var(--primary);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-order:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary);
+        }
+
+        /* Order Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 21, 28, 0.75);
+            backdrop-filter: blur(3px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .modal-card {
+            background: var(--cream-card);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            max-width: 450px;
+            width: 100%;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .selected-product-summary {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--cream-bg);
+            border: 1px solid #e8dec8;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .summary-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .summary-details h5 {
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .summary-details span {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 0.9rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--primary);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .btn-submit-whatsapp {
+            width: 100%;
+            background-color: var(--whatsapp);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        /* Features */
+        .features {
+            background: #ffffff;
+            padding: 2.5rem 1rem;
+            margin-top: 3rem;
+            border-top: 1px solid #e8dec8;
+            border-bottom: 1px solid #e8dec8;
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            color: var(--primary);
+        }
+
+        .feature-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--accent-gold);
+            text-align: center;
+            padding: 1.8rem;
+            font-size: 0.85rem;
+            border-top: 2px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Agrandie -->
+    <header id="mainHeader">
+        <div class="header-content">
+            <img src="logoow.jpeg" alt="DAR LANA9A SHOP Logo" class="header-logo" onerror="this.style.display='none'">
+            <div class="header-text">
+                <h1>DAR LANA9A SHOP</h1>
+                <p>Paiement à la Livraison & Livraison Rapide</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <span class="badge">Collection Luxe 2026</span>
+        <h2>Sublimez Votre Style au Quotidien</h2>
+        <p>Découvrez notre sélection exclusive de montres de haute précision. Recevez votre commande directement chez vous avec vérification avant paiement.</p>
+    </section>
+
+    <!-- Product Catalog -->
+    <div class="container">
+        <h3 class="section-title">Nos Modèles Disponibles</h3>
+        <div class="product-grid" id="productGrid">
+            <!-- Dynamically populated via JS -->
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <h4 class="modal-title">Finaliser votre commande</h4>
+            
+            <div class="selected-product-summary">
+                <img id="modalImg" src="" alt="Product" class="summary-img">
+                <div class="summary-details">
+                    <h5 id="modalTitle">Modèle</h5>
+                    <span id="modalPrice">0 DH</span>
+                </div>
+            </div>
+
+            <form id="orderForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label for="custName">Nom & Prénom *</label>
+                    <input type="text" id="custName" placeholder="Ex: Mohamed Alami" required>
+                </div>
+                <div class="form-group">
+                    <label for="custPhone">Numéro de Téléphone *</label>
+                    <input type="tel" id="custPhone" placeholder="Ex: 06 12 34 56 78" pattern="[0-9\s\+\-\.]+" required>
+                </div>
+                <div class="form-group">
+                    <label for="custCity">Ville / Quartier *</label>
+                    <input type="text" id="custCity" placeholder="Ex: Fkih Ben Salah, Centre" required>
+                </div>
+                <div class="form-group">
+                    <label for="custAddress">Adresse exacte *</label>
+                    <textarea id="custAddress" rows="2" placeholder="N° Rue, Bâtiment..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Envoyer la commande sur WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Livraison Rapide</h4>
+                <p>Livraison à domicile sous 24h/48h</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>Paiement à la Livraison</h4>
+                <p>Payez en espèces après vérification</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Qualité & Garantie</h4>
+                <p>Produits soigneusement sélectionnés</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DAR LANA9A SHOP. Tous droits réservés.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const whatsappNumber = "212770531968"; 
+
+        const products = [
+            {
+                id: "W01",
+                title: "Rolex Day-Date Silver Stick",
+                desc: "Cadran argenté avec lignes verticales, index bâtons luminescents et bracelet Président en acier.",
+                price: "200 DH",
+                image: "rolex1.jpeg"
+            },
+            {
+                id: "W02",
+                title: "Rolex Day-Date Roman Silver",
+                desc: "Cadran effet guilloché avec chiffres romains élégants, loupe Cyclope et finition acier brillant.",
+                price: "200 DH",
+                image: "rolex2.jpeg"
+            },
+            {
+                id: "W03",
+                title: "Patek Philippe Nautilus Green",
+                desc: "Cadran vert olive strié emblématique, lunette octogonale adoucie et bracelet intégré en acier.",
+                price: "150 DH",
+                image: "phillip1.jpeg"
+            },
+            {
+                id: "W04",
+                title: "Audemars Piguet Royal Oak Silver",
+                desc: "Design iconique octogonal, cadran blanc texturé 'Grande Tapisserie', acier d'exception et allure résolument sportive et chic.",
+                price: "200 DH",
+                image: "patekw.jpeg"
+            },
+            {
+                id: "W05",
+                title: "Audemars Piguet Royal Oak Black",
+                desc: "Finition acier brossé, cadran noir intense motif Grande Tapisserie avec boîtier profilé.",
+                price: "200 DH",
+                image: "patekb1.jpeg"
+            }
+        ];
+
+        let selectedProduct = null;
+
+        const productGrid = document.getElementById('productGrid');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <img src="${product.image}" alt="${product.title}" class="product-image">
+                <div class="product-info">
+                    <h4 class="product-title">${product.title}</h4>
+                    <p class="product-desc">${product.desc}</p>
+                    <div class="product-footer">
+                        <span class="product-price">${product.price}</span>
+                        <button class="btn-order" onclick="openModal('${product.id}')">
+                            <i class="fa-brands fa-whatsapp"></i> Commander
+                        </button>
+                    </div>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+
+        function openModal(productId) {
+            selectedProduct = products.find(p => p.id === productId);
+            document.getElementById('modalTitle').innerText = selectedProduct.title;
+            document.getElementById('modalPrice').innerText = selectedProduct.price;
+            document.getElementById('modalImg').src = selectedProduct.image;
+            document.getElementById('orderModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const city = document.getElementById('custCity').value;
+            const address = document.getElementById('custAddress').value;
+
+            const message = 
+                `Bonjour DAR LANA9A SHOP ! Je souhaite passer une commande :\n\n` +
+                `⌚ *PRODUIT :* ${selectedProduct.title} (Réf: ${selectedProduct.id})\n` +
+                `💰 *PRIX :* ${selectedProduct.price}\n\n` +
+                `👤 *CLIENT :* ${name}\n` +
+                `📞 *TÉLÉPHONE :* ${phone}\n` +
+                `📍 *VILLE :* ${city}\n` +
+                `🏠 *ADRESSE :* ${address}\n\n` +
+                `Paiement : Cash à la livraison. Merci !`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        let lastScroll = 0;
+        const mainHeader = document.getElementById('mainHeader');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                mainHeader.classList.add('header-hidden');
+            } else {
+                mainHeader.classList.remove('header-hidden');
+            }
+
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+</html>
